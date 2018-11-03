@@ -1,6 +1,6 @@
 {
   "name": "@bjoerge/immerge",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Immutable shallow merge of plain JavaScript objects, maintaining referential equality when possible",
   "main": "immerge.js",
   "scripts": {
