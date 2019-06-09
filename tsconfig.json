@@ -1,12 +1,13 @@
 {
-  "forceConsistentCasingInFileNames": true,
-  "noImplicitReturns": true,
-  "strict": true,
   "compilerOptions": {
-    "target": "ES3",
+    "lib": ["es2015"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "es2015",
     "module": "commonjs",
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
-  }
+  },
+  "files": ["./immerge.ts"]
 }

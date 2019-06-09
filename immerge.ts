@@ -25,15 +25,17 @@ const isEmpty = (obj: object): boolean => {
   return true
 }
 
-function mergeIfDifferent<T extends object | any[]>(target: T, source: T): T {
+function mergeIfDifferent<T extends object, U extends object>(
+  target: T,
+  source: U,
+): T & U {
   // note: assumes both target and source are non-empty objects
-  // @ts-ignore
-  const result = Array.isArray(target) ? [...target] : { ...target }
+  const result: any = Array.isArray(target) ? [...target] : { ...target }
   let isDifferent = false
   for (const sourceProp in source) {
     if (hasOwn(source, sourceProp)) {
       const sourceValue = source[sourceProp]
-      if (isDifferent || sourceValue !== target[sourceProp]) {
+      if (isDifferent || sourceValue !== (target as any)[sourceProp]) {
         isDifferent = true
         result[sourceProp] = sourceValue
       }

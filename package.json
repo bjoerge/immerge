@@ -4,10 +4,10 @@
   "description": "Immutable shallow merge of plain JavaScript objects, maintaining referential equality when possible",
   "main": "immerge.js",
   "scripts": {
-    "test": "jest && tsc test/typings.ts --noEmit",
+    "test": "jest && tsc --noEmit",
     "prepublish": "npm run build",
     "postpublish": "npm run clean",
-    "build": "tsc --declaration immerge.ts",
+    "build": "tsc --declaration",
     "clean": "rm -f immerge.d.ts immerge.js",
     "bench": "npm run build && node bench/runAll.js && npm run clean"
   },
@@ -20,15 +20,15 @@
   "author": "Bjørge Næss <bjoerge@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^23.3.9",
+    "@types/jest": "^24.0.13",
     "benchmark": "^2.1.4",
-    "jest": "^23.6.0",
-    "prettier": "1.14.3",
-    "ts-jest": "^23.10.4",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.1.6"
+    "jest": "^24.8.0",
+    "prettier": "1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.1"
   },
   "directories": {
     "test": "test"

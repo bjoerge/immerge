@@ -80,7 +80,7 @@ test('arrays keeps object identity of first non-empty', () => {
 })
 
 test('arrays: returns array if first parameter is array', () => {
-  const empty = []
+  const empty: any[] = []
   expect(immerge(empty, [1, 2, 3])).toEqual([1, 2, 3])
   expect(immerge([], { 0: 1, 1: 2, 2: 3 })).toEqual([1, 2, 3])
   expect(immerge(empty, {})).toEqual([])
